@@ -1,0 +1,594 @@
+@charset 'utf-8';
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display+SC);
+@import url(https://fonts.googleapis.com/css?family=Ovo);
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+/*@include foundation-button;*/
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+/* ------------ HEADER STYLES -----------*/
+
+.row {
+    width: 100%;
+}
+
+.header {
+    height: 100%;
+    background: url("../img/bg.jpg") center no-repeat;
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+}
+
+.title-bar {
+    background: #fff;
+    padding: 0px 15px 0 15px;
+    height: 42px;
+}
+
+.top-bar {
+    background-color: #fff;
+    height: 42px;
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    ul {
+        background-color: #fff;
+    }
+    @include breakpoint(medium) {
+        position: relative;
+    }
+}
+
+.menu li {
+    @include breakpoint(small only) {
+        display: block;
+        width: 100%;
+        border-top: 1px solid #eee;
+        a {
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+    display: inline-block;
+}
+
+.menu-text {
+    padding-top: 0;
+}
+
+.menu-icon {
+    margin-top: 13px;
+}
+
+.top-bar .lego-menu {
+    @include breakpoint(small only) {
+        display: none;
+    }
+}
+
+.logo-container {
+    height: 100%;
+    width: 100%;
+}
+
+.small-logo {
+    height: 20px;
+    margin-top: 10px;
+}
+
+.small-logo-mobile {
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 1px;
+}
+
+.no-js {
+    @include breakpoint(small only) {
+        .top-bar {
+            display: none;
+        }
+    }
+    @include breakpoint(medium) {
+        .title-bar {
+            display: none;
+        }
+    }
+}
+
+.top-bar.expanded {
+    overflow: visible;
+}
+
+.dropdown a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: .8rem;
+    color: black;
+    transition: all 0.2s linear;
+    &:hover {
+        color: #ff9999;
+    }
+    @include breakpoint(450px) {
+        font-size: 1rem;
+        margin-top: 4px;
+    }
+}
+
+.logo {
+    padding-top: 14vh;
+    display: block;
+    margin: 0 auto;
+    height: 88vh;
+    z-index: 10;
+    @include breakpoint(medium) {
+        padding-top: 8vh;
+        height: 92vh;
+    }
+}
+
+.down-arrow {
+    padding-top: 1vh;
+    display: block;
+    margin: 0 auto;
+    height: 7vh;
+}
+
+
+/* ------------ INFO STYLES -----------*/
+
+.row .row {
+    margin: 0;
+}
+
+.info-outer {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 960px;
+}
+
+.info-address {
+    padding: 45px 0 30px 0;
+}
+
+.info-text {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    letter-spacing: 2px;
+    span {
+        font-weight: 700;
+    }
+}
+
+.row.img-grid-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.img-grid-item {
+    border: none;
+    padding: 5px 10px 5px 10px;
+    img {
+        width: 100%;
+    }
+}
+
+.hours-row {
+    padding-bottom: 20px;
+}
+
+.hours {
+    padding: 20px 0 25px 0;
+}
+
+hr {
+    text-align: center;
+    width: 100%;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.74902), transparent);
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    margin-top: 35px;
+    @include breakpoint(medium) {
+        margin-top: 45px;
+    }
+}
+
+
+/* ------------ BANNER STYLES -----------*/
+
+.banner-container {
+    width: 100%;
+    height: 675px;
+    padding: 200px 0;
+    background: url("../img/parallax-2-bg.jpg");
+    @include breakpoint (420px) {
+        padding-top: 250px;
+    }
+}
+
+.banner-text {
+    width: 100%;
+    text-align: center;
+    h1 {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        color: #fff;
+        padding-bottom: 20px;
+        font-size: 64px;
+        line-height: 1.3;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 3px grey;
+        @include breakpoint(medium) {
+            font-size: 72px;
+        }
+    }
+    p {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 1rem;
+        color: grey;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 1px 1px 1px #ccc;
+        background: #fff;
+        @include breakpoint(medium) {
+            display: inline-block;
+            padding: 0 100px 0 100px;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 1), transparent);
+        }
+        @include breakpoint(large) {
+            width: 60%;
+        }
+    }
+}
+
+
+/* ------------ ABOUT CHEF STYLES -----------*/
+
+.chef-section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-chef {
+    margin: 0;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 2rem;
+    h3 {
+        padding-top: 20px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        letter-spacing: 2px;
+    }
+    p {
+        padding: 20px 20px 20px 20px;
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.1rem;
+    }
+    .quote {
+        padding: 15px 30px;
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        @include breakpoint(medium) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+    @include breakpoint(medium) {
+        width: 70%;
+        max-width: 960px;
+    }
+    @include breakpoint(medium) {
+        width: 80%;
+        max-width: 960px;
+    }
+}
+
+.chef-pic {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    max-width: 70%;
+}
+
+.btn {
+    -webkit-border-radius: 3;
+    -moz-border-radius: 3;
+    border-radius: 3px;
+    color: #ffffff;
+    background: #92A8D1;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    display: inline-block;
+    margin: 2rem 0;
+    &:focus {
+        border: 0;
+        background: 92A8D1;
+        color: #fff;
+    }
+    &:active {
+        border: 0;
+        color: #fff;
+    }
+    &:hover {
+        background: #aab1bd;
+        text-decoration: none;
+        color: #fff;
+    }
+    @include breakpoint(small only) {
+        padding: .8rem 2rem;
+    }
+}
+
+
+/* ------------ RESERVATION FORM STYLES -----------*/
+
+.reservation {
+    width: 100%;
+    margin: 0 auto;
+    div {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+        @include breakpoint(medium) {
+            max-width: 600px;
+        }
+    }
+}
+
+.reservation_form {
+    width: 100%;
+    margin: 0 auto;
+    legend {
+        margin: 0 auto;
+        text-align: center;
+        font-family: 'Playfair Display SC', serif;
+        font-size: 2rem;
+        letter-spacing: 3px;
+        margin-bottom: 30px;
+    }
+    input {
+        border: 1px solid #ccc;
+        border-radius: 0;
+        width: 100%;
+        margin-bottom: 20px;
+        color: #000;
+    }
+    input:last-of-type {
+        margin-bottom: 0px;
+    }
+    .btn {
+        border: none;
+        width: 150px;
+        border-radius: 3px;
+        margin: 0 auto;
+        color: #fff;
+    }
+    .form_submit {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+}
+
+
+/* ------------ FOOTER STYLES -----------*/
+
+footer {
+    background-color: #f7cac9;
+    margin: 0;
+    height: auto;
+    ul {
+        margin: 0;
+        list-style: none;
+    }
+}
+
+.footer-nav {
+    text-align: center;
+    /*margin-top: 20px;*/
+    padding: 20px 0;
+    a {
+        padding: 10px;
+        display: block;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+        font-size: .8rem;
+        letter-spacing: 3px;
+        color: #292929;
+        &:hover {
+            color: #888;
+        }
+    }
+}
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .7rem;
+    text-transform: uppercase;
+    img {
+        height: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+
+/* ------------ FOOTER STYLES -----------*/
+
+.menu-banner {
+    height: 322px;
+    background-image: url(../img/menu-banner.jpg);
+    margin-top: 0px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 25px;
+}
+
+.menu-banner-text {
+    padding-top: 35px;
+    text-align: center;
+    /*text-shadow: 1px 1px 1px gray;*/
+}
+
+.menu-banner-text h1 {
+    padding-top: 70px;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: #fff;
+}
+
+.menu-banner-text p {
+    margin-top: -15px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.menu-section {
+    padding: 15px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu-section-header {
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 2.5rem;
+    padding: 40px 0 40px 0;
+}
+
+.menu-items {
+    margin: 0 auto;
+    /*padding-left: 10px;
+  padding-right: 10px;*/
+}
+
+.menu-item {
+    padding-bottom: 50px;
+    display: inline-block;
+    width: 100%;
+}
+
+.menu-item-price {
+    float: right;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+.menu-item-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-bottom: 7px;
+}
+
+.thank_you {
+    text-align: center;
+    margin-top: 15%;
+}
+
+@media only screen and (min-width: 640px) {
+    .menu-banner {
+        margin-top: 0px;
+        height: 100%;
+        min-height: 530px;
+        background-position: center;
+    }
+    .menu-banner-text h1 {
+        padding-top: 150px;
+        font-size: 4rem;
+    }
+    .menu-banner-text p {
+        margin-top: 0px;
+    }
+    .menu-items {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (min-width: 875px) {
+    .menu-container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .menu-items {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .menu-item {
+        width: 48%;
+        vertical-align: top;
+    }
+    .menu-item:nth-child(even) {
+        padding-left: 40px;
+    }
+}

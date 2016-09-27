@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bombay Mahal</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <section class="header parallax parallax-1">
+        <nav>
+            <div class="title-bar clearfix" data-responsive-toggle="toggle-menu" data-hide-for="medium">
+                <a href="index.html"><img class="small-logo-mobile" src="img/small-leaf-logo.png"></a>
+                <button class="menu-icon dark float-right" type="button" data-toggle></button>
+                <div class="title-bar-title float-right"></div>
+            </div>
+            <div class="top-bar" id="toggle-menu">
+                <div class="top-bar-left">
+                    <ul class="dropdown menu lego-menu" data-dropdown-menu>
+                        <a href="index.html">
+                            <li class="menu-text"><img class="small-logo" src="img/small-leaf-logo.png"></li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+                    <ul class="dropdown menu menu-right">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="#reservation">RESERVATION</a></li>
+                        <li><a href="#info-section">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="column small-12 small-centered">
+                <img class="logo" src="img/logo.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column small-12 small-centered">
+                <a href="#info-section"><img class="down-arrow" src="img/down-arrow.png"></a>
+            </div>
+        </div>
+    </section>
+    <section id="info-section" class="info-section row">
+        <div class="info-outer column small-12 small-centered">
+            <div class="row">
+                <div class="info-address info-text column small-12 small-centered">
+                    <p class="address"><span>Bombay Mahal</span>
+                        <br> 1001, rue Jean-Talon Ouest
+                        <br> Montréal (Québec) H3N 1T2
+                        <br> <a href="tel:+1 514-273-3331">+1 514-273-3331</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row  img-grid-container">
+                <div class="img-grid-item column small-12 medium-4">
+                    <img src="img/callout-img-1.jpg">
+                </div>
+                <div class="img-grid-item column small-12 medium-4">
+                    <img src="img/callout-img-2.jpg">
+                </div>
+                <div class="img-grid-item column small-12 medium-4">
+                    <img src="img/callout-img-3.jpg">
+                </div>
+            </div>
+            <div class="row hours-row">
+                <div class="column small-12 hours-column">
+                    <hr>
+                    <div class="info-text column small-10 small-offset-1 hours">
+                        <span>HOURS</span>
+                        <p>BREAKFAST // 6:30AM - 11AM,
+                            <br> LUNCH // 11AM - 2PM, WEEKDAYS
+                            <br> MIDDAY // 2PM - 5PM, DAILY
+                            <br> DINNER // 5PM - 11PM, DAILY</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="banner-container parallax parallax-2">
+        <div class="banner-text" id="banner-text">
+            <h1>The Cuisine</h1>
+            <p>Simple // Southern Indian // Fresh</p>
+        </div>
+    </section>
+    <section class="chef-section">
+        <div class="about-chef">
+            <img class="chef-pic" src="img/chef.jpg">
+            <h3>Chef Bhaanupriya Avvari</h3>
+            <p>Raised in Bombay's Gopur Valley, Bhaanupriya Avvari’s first job was harvesting local pomegranates for two cents a pound. A childhood surrounded by dairies, orchards, and rivers full of parsha led her to enroll in and graduate from the International Culinary Center in 2001.</p>
+            <p class="quote">“My husband was lucky enough to marry a wonderful chef.”</p>
+            <p>Various jobs in well-known kitchens followed, including time with Aditi Handa at Nimmy Paul, Phillip Kutty's Farm in Kerala, as well as a stint with Chand Palace in Montreal.</p>
+            <a href="menu.html" class="btn">See the menu</a>
+            <hr id="reservation">
+        </div>
+    </section>
+    <section class="reservation">
+        <div>
+            <form action="table_booking.php" class="reservation_form" method="POST">
+                <legend class="reservation_header">Make a reservation</legend>
+                <label>First name:</label>
+                <input type="text" name="customer_first_name" required>
+                <label>Last name:</label>
+                <input type="text" name="customer_last_name" required>
+                <label>E-mail address:</label>
+                <input type="email" name="email_address">
+                <label>Phone number:</label>
+                <input type="tel" name="phone_number" required>
+                <label>Number in party:</label>
+                <input type="number" min="1" max="12" name="number_in_party" required>
+                <label>Date of reservation:</label>
+                <input type="date" name="date_booked" placeholder="" min="" id="date_booked" required>
+                <label>Time of reservation:</label>
+                <input type="time" name="time_booked" min="17:00:00" max="22:00:00" step="3600" required>
+                <div class="form_submit">
+                    <input class="btn" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <ul class="footer-nav">
+            <li><a href="#">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="#reservation">RESERVATION</a></li>
+            <li><a href="#info-section">CONTACT</a></li>
+        </ul>
+        <div class="copyright">
+            <img src="img/small-leaf-logo.png">
+            <p>&copy;2016 Bombay Mahal</p>
+        </div>
+    </footer>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="js/app.js"></script>
+    
+</body>
+
+</html>
